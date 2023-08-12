@@ -1,0 +1,386 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing:border-box;
+}
+body{
+	background: linear-gradient(#ccffcc,#ff99cc);
+}
+.content{
+    width: 100%;
+    height: 200px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 3rem 0 3rem 10rem;
+    z-index: 2;
+}
+.content::before{
+    content: "";
+    position: absolute;
+    left: 38%;
+    bottom: 0;
+    width: 300vw;
+    height: 300vw;
+    border-radius: 150vw;
+    transform: translateX(-40%);
+    z-index: -1;
+    background: linear-gradient(45deg,#000066,#ffffff);
+    
+}
+@media only screen and (min-width:300px) and (max-width:1000px){
+    .content{
+        width: 200%;
+        height: 200px;
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        padding: 3rem 0 3rem 10rem;
+        z-index: 2; 
+    }
+    .content::before{
+        content: "";
+        position: absolute;
+        left: 38%;
+        bottom: 0;
+        width: 600vw;
+        height: 300vw;
+        border-radius: 150vw;
+        transform: translateX(-40%);
+        z-index: -1;
+        background: linear-gradient(45deg,#000066,#ffffff);
+        
+    }
+}
+@media  (max-width:1000px){
+    .summary_t{
+        max-width: 1000px;
+    }
+}
+.content h1{
+    color: black;
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.content img{
+    width: 10%;
+    height: 50%;
+    margin-top: -30px;
+}
+.step-wizard{
+    min-height: 150vh;
+    width: 100%;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+   
+}
+
+.title {
+  color: #eee;
+  font-family: sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.subtitle {
+  color: #eee;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+  text-align: center
+}
+
+/* ===== Google Font Import - Poppins ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+:root{
+	--primary: #6b59d3;
+	--secondary: #bfc0c0;
+	--white: #fff;
+	--text-clr: #5b6475;
+	--header-clr: #25273d;
+	--next-btn-hover: #8577d2;
+	--back-btn-hover: #08d;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: block;
+    align-items: center;
+    justify-content: center;
+   
+}
+.content{
+    width: 100%;
+    height: 200px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 3rem 0 3rem 10rem;
+    z-index: 2;
+}
+.content::before{
+    content: "";
+    position: absolute;
+    left: 38%;
+    bottom: 0;
+    width: 300vw;
+    height: 300vw;
+    border-radius: 150vw;
+    transform: translateX(-40%);
+    z-index: -1;
+   
+    
+}
+.content h1{
+    color: black;
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.content img{
+    width: 10%;
+    height: 50%;
+    margin-top: -30px;
+}
+.step-wizard{
+    min-height: 150vh;
+    width: 100%;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+   
+}
+
+.container{
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 30px;
+    margin: 0 15px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 200px;
+    margin-bottom: 40px;
+}
+.container header{
+    position: relative;
+    font-size: 30px;
+    font-weight: 600;
+    color: #333;
+	text-align: center;
+}
+.container form{
+    position: relative;
+    margin-top: 16px;
+    min-height: 490px;
+    background-color: #fff;
+    overflow: hidden;
+    align-items: center;
+}
+.container form .form{
+    position: absolute;
+    background-color: #fff;
+    transition: 0.3s ease;
+}
+.container form .form.second{
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(100%);
+}
+form.secActive .form.second{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+form.secActive .form.first{
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-100%);
+}
+.title{
+    display: block;
+    margin-bottom: 40px;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: #333;
+	margin-top: 20px;
+}
+.container form .fields{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+	margin-top: 50px;
+}
+form .fields .input-field{
+    display: flex;
+    width: calc(100% / 3 - 15px);
+    flex-direction: column;
+    margin: 4px 0;
+}
+.input-field label{
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+.input-field input, select{
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+}
+.input-field input :focus,
+.input-field select:focus{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+.input-field select,
+.input-field input[type="date"]{
+    color: #707070;
+}
+.input-field input[type="date"]:valid{
+    color: #333;
+}
+
+
+@media (max-width: 750px) {
+    .container form{
+        overflow-y: scroll;
+    }
+    .container form::-webkit-scrollbar{
+       display: none;
+    }
+    form .fields .input-field{
+        width: calc(100% / 2 - 15px);
+    }
+}
+
+@media (max-width: 550px) {
+    form .fields .input-field{
+        width: 100%;
+    }
+}
+.buttons{
+    align-items: center;
+    margin-left: 230px;
+    margin-top: 50px;
+}
+
+.summary_t{
+    position: relative;
+    max-width: 900px;
+    border-radius: 6px;
+    padding: 30px;
+    margin: 0 15px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 200px;
+    margin-bottom: 40px;
+}
+   
+   h1 {
+     text-align: center;
+   }
+   
+   h2 {
+     margin-top: 10px;
+   }
+   
+   table {
+     width: 100%;
+     border-collapse: collapse;
+     margin-bottom: 10px;
+   }
+   
+   table, th, td {
+     border: 1px solid black;
+     padding: 8px;
+     text-align: center;
+   }
+ .btn_continue{
+    margin-left: 310px;
+    margin-top: 40px;
+    background: #58cc02;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    max-width: 200px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    transition: all 0.3s linear;
+    cursor: pointer;
+ }
+ .btnText{
+    text-decoration: none;
+ }
+ h1{
+    text-align: center;
+}
+.box{
+    width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 5px;
+    border: 1px solid;
+    border: 1px solid #c6c6c6;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0,.5);
+}
+.box label{
+    margin-right:15px;
+
+}
+.box .button{
+    width: 37px;
+    height: 37px;
+    border: 1px solid #c6c6c6;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+}
+.box input{
+    width: 60px;
+    padding: 5px 10px;
+    border: 1px solid #c6c6c6;
+    border-radius: 5px;
+    font-size: 12px;
+    margin: 0 10px;
+}
+.box .button:active{
+    background: #ccc;
+}

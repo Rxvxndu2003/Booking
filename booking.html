@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./booking.css">
+    <title>Book Now</title>
+</head>
+<body>
+    <section class="header-1">
+        <div class="content">
+               <a href="./Home.html"><img src="./Images/Untitled-1-1.png"></a>
+              <h1>Buy Tickets</h1>
+        </div>
+    </section>
+
+    <div class="container">
+      <header>Book Now</header>
+      <br>
+      <header>Lets grab your tickets now!</header>
+      <form action="#">
+          <div class="form first">
+              <div class="details personal">
+                  <span class="title">Tickets Details</span>
+                  <div class="fields">
+                      <div class="input-field">
+                          <label> Name</label>
+                          <input type="text" placeholder="Enter your name" required id="name">
+                      </div>
+                      <div class="input-field">
+                        <label>Contact Number</label>
+                        <input type="number" placeholder="Enter your mobile number" required id="con_num">
+                      </div>
+                      <div class="input-field">
+                          <label>Date</label>
+                          <input type="date" placeholder="Enter when is your coming" required id="date">
+                      </div>
+                      <div class="input-field">
+                        <label id="duration">Duration</label>
+                        <select required id="duration">
+                            <option disabled selected>Select Duration</option>
+                            <option>7.00 a.m -8.00 a.m</option>
+                            <option>8.00 a.m -9.00 a.m</option>
+                            <option>9.00 a.m -10.00 a.m</option>
+                            <option>10.00 a.m -11.00 a.m (peak)</option>
+                            <option>11.00 a.m -12.00 a.m</option>
+                            <option>12.00 a.m -13.00 p.m</option>
+                            <option>13.00 a.m -14.00 p.m</option>
+                            <option>14.00 a.m -15.00 p.m</option>
+                            <option>15.00 a.m -16.00 p.m</option>
+                            <option>16.00 a.m -17.00 p.m</option>
+                            <option>17.00 a.m -18.00 p.m (peak)</option>
+                        </select>
+                      </div>
+                      <div class="input-field">
+                          <label id="foreigner-adult">Foreigner Adult (over 15 years) :</label>
+                          <input type="number" placeholder="0">
+                      </div>
+                      <div class="input-field">
+                          <label id="foreigner-child">Foreigner Child (5 to 14 years) :</label>
+                          <input type="number" placeholder="0">
+                      </div>
+                      <div class="input-field"> 
+                          <label id="sl-adult">SL Adult (over 15 years) :</label>
+                          <input type="number" placeholder="0">
+                      </div>
+                      <div class="input-field">
+                          <label id="sl-child">SL Child (5 to 14 years) :</label>
+                          <input type="number" placeholder="0">
+                      </div>
+                      <div class="input-field">
+                          <label id="infant">Infant (Under 4 years ) :</label>
+                          <input type="number" placeholder="0">
+                      </div>
+                  </div>
+              </div> 
+              </div> 
+          </div>
+      </form>
+  </div>
+     <section class="summary">
+             <div class="summary_t">
+              <table id="summary-table">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Guests</th>
+                    <th>Number of Tickets</th>
+                    <th>Tickets Value</th>
+                    
+                  </tr>
+                </thead>
+                <tbody id="tickets-table">
+                  <!--dynamically updated-->
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="5">Total Payable:</td>
+                    <td id="total-paypal">$10</td>
+                  </tr>
+                </tfoot>
+              </table>
+                <button class="btn_continue" id="con_btn" type="submit">
+                  <span class="btnText">Continue to Purchase</span>
+                  <i class="uil uil-navigator"></i>
+              </button>
+            </div>
+             </div>
+     </section>
+  
+    <script src="./script.js"></script>
+</body>
+</html>
